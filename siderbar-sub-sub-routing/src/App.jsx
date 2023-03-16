@@ -9,7 +9,7 @@ function App() {
         <Link to="">home</Link>
         <Link to="dashboard">dashboard</Link>
         <Link to="accounts">accounts</Link>
-        <Link to="sales">sales</Link>
+        <Link to="revenue">revenue</Link>
         <Link to="expenses">expenses</Link>
         <Link to="reports">reports</Link>
       </nav>
