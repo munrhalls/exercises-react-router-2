@@ -1,5 +1,5 @@
 import "./App.css";
-import { Link, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 
 function App() {
   return (
@@ -13,7 +13,19 @@ function App() {
         <Link to="/">Homepage</Link>
         <Link to="dashboard">Dashboard</Link>
         <Link to="clients">Clients</Link>
-        <Link to="accomplishments">Accomplishments</Link>
+        <NavLink
+          to="accomplishments"
+          style={({ isActive, isPending }) => {
+            return {
+              color: isActive ? "lightblue" : "inherit",
+            };
+          }}
+          className={({ isActive, isPending }) => {
+            return isActive ? "active" : isPending ? "pending" : "";
+          }}
+        >
+          Accomplishments
+        </NavLink>
         <Link to="expenses">Expenses</Link>
         <Link to="contacts">Contacts</Link>
       </nav>
